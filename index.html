@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Kelas X TJKT 2</title>
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --secondary: #8b5cf6;
+            --accent: #ec4899;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --gray: #64748b;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.5;
+            color: var(--dark);
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+        }
+        
+        h1 {
+            color: var(--primary-dark);
+            text-align: center;
+            margin-bottom: 5px;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        h2 {
+            color: var(--secondary);
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 500;
+            font-size: 1.2rem;
+        }
+        
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+        
+        .day-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            margin-bottom: 12px;
+            border-left: 4px solid var(--primary);
+            transition: all 0.2s ease;
+        }
+        
+        .day-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .day-header {
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+        
+        .day-header::before {
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 4px;
+            background: var(--accent);
+            margin-right: 10px;
+            transform: rotate(45deg);
+        }
+        
+        .subject-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .subject {
+            background-color: rgba(59, 130, 246, 0.08);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: var(--dark);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.2s ease;
+        }
+        
+        .subject:hover {
+            background-color: rgba(59, 130, 246, 0.15);
+            transform: translateY(-1px);
+        }
+        
+        .subject-code {
+            font-weight: 600;
+            color: var(--primary-dark);
+            display: inline-block;
+            margin-right: 6px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--gray);
+            font-size: 0.9rem;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                border-radius: 12px;
+            }
+            
+            .subject {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JADWAL KELAS X TJKT 2</h1>
+        <h2>SMK TI BALI GLOBAL KARANGASEM</h2>
+        
+        <div class="schedule-grid">
+            <!-- Senin -->
+            <div class="day-card">
+                <div class="day-header">Senin (Monday)</div>
+                <div class="subject-list">
+                    <div class="subject">
+                        <span class="subject-code">DPK</span> Dasar Program Keahlian
+                    </div>
+                    <div class="subject">
+                        <span class="subject-code">M</span> Matematika
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Selasa -->
+            <div class="day-card">
+                <div class="day-header">Selasa (Tuesday)</div>
+                <div class="subject-list">
+                    <div class="subject">
+                        <span class="subject-code">KDKA</span> Keterampilan Dasar Komputer dan Jaringan
+                    </div>
+                    <div class="subject">
+                        <span class="subject-code">BB</span> Bahasa Inggris
+                    </div>
+                    <div class="subject">
+                        <span class="subject-code">I</span> Informatika
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Rabu -->
+            <div class="day-card">
+                <div class="day-header">Rabu (Wednesday)</div>
+                <div class="subject-list">
+                    <div class="subject">
+                        <span class="subject-code">Bing</span> Bahasa Inggris
+                    </div>
+                    <div class="subject">
+                        <span class="subject-code">DPK</span> Dasar Program Keahlian
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Kamis -->
+            <div class="day-card">
+                <div class="day-header">Kamis (Thursday)</div>
+                <div class="subject-list">
+                    <div class="subject">
+                        <span class="subject-code">PAdBP</span> Pendidikan Agama dan Budi Pekerti
+                    </div>
+                    <div class="subject">
+                        <span class="subject-code">SB</span> Seni Budaya
+                    </div>
+                    <div class="subject">
+                        <span class="subject-code">Pipas</span> Pendidikan Pancasila
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Jumat -->
+            <div class="day-card">
+                <div class="day-header">Jumat (Friday)</div>
+                <div class="subject-list">
+                    <div class="subject">
+                        <span class="subject-code">DPK</span> Dasar Program Keahlian
+                    </div>
+                    <div class="subject">
+                        <span class="subject-code">BI</span> Bahasa Indonesia
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sabtu -->
+            <div class="day-card">
+                <div class="day-header">Sabtu (Saturday)</div>
+                <div class="subject-list">
+                    <div class="subject">
+                        <span class="subject-code">PP</span> Pendidikan Pancasila
+                    </div>
+                    <div class="subject">
+                        <span class="subject-code">Pipas</span> Pendidikan Pancasila & Kewarganegaraan
+                    </div>
+                    <div class="subject">
+                        <span class="subject-code">SI</span> Simulasi & Komunikasi Digital
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Tahun Ajaran 2025/2026 • ©Edimahendra</p>
+            <p>SMK TI Bali Global Karangasem</p>
+        </div>
+    </div>
+</body>
+</html>
